@@ -59,7 +59,7 @@ const Projects = () => {
       name: "IHURIRO.COM",
       details: ihuriroDetails,
       image: ihuriro1,
-      video: "https://www.youtube.com/embed/tgbNymZ7vqY",
+      video: "https://www.youtube.com/embed/mOtTAv_CzDg",
     },
     {
       name: "DOMAIN NAMES TOOL",
