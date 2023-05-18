@@ -25,7 +25,7 @@ const About = () => {
             </div>
             <div className="col-md-5 d-flex justify-content-center">
               <div className="face-img-holder">
-                <img src={faceImg} alt="Image" />
+                <img src={faceImg} alt="face" />
               </div>
             </div>
           </div>

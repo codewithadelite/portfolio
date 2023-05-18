@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const TechStack = () => {
   const python = require("../assets/images/logos/python.png");

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import ProjectDetail from "./ProjectDetail";
 import { Modal } from "react-bootstrap";
 
@@ -149,7 +148,7 @@ const Projects = () => {
           </button>
         </Modal.Header>
         <Modal.Body>
-          <iframe width="100%" height="315" src={video}></iframe>
+          <iframe title="demo" width="100%" height="315" src={video}></iframe>
         </Modal.Body>
       </Modal>
     </div>
