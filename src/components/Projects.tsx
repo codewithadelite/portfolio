@@ -148,7 +148,13 @@ const Projects = () => {
           </button>
         </Modal.Header>
         <Modal.Body>
-          <iframe title="demo" width="100%" height="315" src={video}></iframe>
+          <iframe
+            title="demo"
+            width="100%"
+            allowFullScreen
+            height="315"
+            src={video}
+          ></iframe>
         </Modal.Body>
       </Modal>
     </div>
