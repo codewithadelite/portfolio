@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
+import emailjs from "@emailjs/browser";
+
+interface EmailParams {
+  user_email: string;
+  subject: string;
+  message: string;
+}
 
 const Contact = () => {
   const faceImg = require("../assets/images/face.jpg");
@@ -9,6 +16,29 @@ const Contact = () => {
     iconSize: [60, 60],
     className: "rounded-circle border-gray",
   });
+
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    let payload: EmailParams = {
+      user_email: email,
+      subject: subject,
+      message: message,
+    };
+    /*
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+      process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
+      payload,
+      process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
+    );
+  */
+  };
   return (
     <div className="container w-100  mt-5">
       <div className="container">
@@ -36,13 +66,14 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 mb-4">
-            <form action="">
+            <form onSubmit={handleSubmit}>
               <div className="form-group mb-4">
                 <input
                   type="email"
                   name="email"
                   className="form-input border-touch"
                   placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="form-group mb-4">
@@ -51,6 +82,7 @@ const Contact = () => {
                   name="subject"
                   className="form-input border-touch"
                   placeholder="Subject"
+                  onChange={(e) => setSubject(e.target.value)}
                 />
               </div>
               <div className="form-group mb-4">
@@ -61,11 +93,19 @@ const Contact = () => {
                   id=""
                   cols={30}
                   rows={4}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
               <div className="form-group mb-4">
-                <button className="btn btn-block btn-success bg-green py-3 px-4">
-                  Submit
+                <button
+                  type="submit"
+                  className="btn btn-block btn-success bg-green py-3 px-4"
+                >
+                  {isLoading ? (
+                    <span className="spinner-border spinner-border-sm"></span>
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
               </div>
             </form>

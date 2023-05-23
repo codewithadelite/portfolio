@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Python",
+    "icon": "devicon-python-plain"
+  },
+  {
+    "name": "Django",
+    "icon": "devicon-django-plain"
+  },
+  {
+    "name": "MySQL",
+    "icon": "devicon-mysql-plain"
+  },
+  {
+    "name": "Javascript",
+    "icon": "devicon-javascript-plain"
+  },
+  {
+    "name": "Typescript",
+    "icon": "devicon-typescript-plain"
+  },
+  {
+    "name": "React",
+    "icon": "devicon-react-plain"
+  },
+  {
+    "name": "Html",
+    "icon": "devicon-html5-plain"
+  },
+  {
+    "name": "Css",
+    "icon": "devicon-css3-plain"
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "devicon-bootstrap-plain"
+  },
+  {
+    "name": "Git",
+    "icon": "devicon-git-plain"
+  },
+  {
+    "name": "Docker",
+    "icon": "devicon-docker-plain"
+  },
+  {
+    "name": "Pytest",
+    "icon": "devicon-pytest-plain"
+  }
+]

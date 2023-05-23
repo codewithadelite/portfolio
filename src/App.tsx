@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import TechStack from "./components/TechStack";
+import Skills from "./components/Skills";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<About />} />
-          <Route path="/skills" element={<TechStack />} />
+          <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

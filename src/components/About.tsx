@@ -15,8 +15,8 @@ const About = () => {
                   SHEMA NIYONSHUTI
                 </h1>
                 <p className="text-gray1 text-xl mt-4 ">
-                  Passionate Software developer with 6+ years in the field.
-                  Highly experienced in web based apps development.
+                  Passionate Software developer. Highly experienced in web
+                  development.
                 </p>
                 <p className="text-gray1 text-xl mt-4 d-none">
                   My heart beats passionately for software development.
