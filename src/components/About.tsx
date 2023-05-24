@@ -18,9 +18,6 @@ const About = () => {
                   Passionate Software developer. Highly experienced in web
                   development.
                 </p>
-                <p className="text-gray1 text-xl mt-4 d-none">
-                  My heart beats passionately for software development.
-                </p>
               </div>
             </div>
             <div className="col-md-5 d-flex justify-content-center">
@@ -42,8 +39,9 @@ const About = () => {
             <AnimationOnScroll animateIn="animate__fadeInUp">
               <p className="text-gray1 text-xl mt-3 text-center">
                 The name is <span className="gradient-text">Adelite</span>{" "}
-                Niyonshuti Shema. I'm multi-disciplinary developer, passionate
-                in web applications development.
+                Niyonshuti Shema. I'm software developer, passionate in
+                Fullstack development. When I am not writting code, I am playing
+                football ⚽ or listening Kompa musics 🎵.
               </p>
             </AnimationOnScroll>
           </div>
