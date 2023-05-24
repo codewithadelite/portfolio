@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import emailjs from "@emailjs/browser";
+import { alert } from "../utils/alert";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -26,14 +27,19 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setIsLoading(false);
           form.current?.reset();
+          alert().fire({
+            icon: "success",
+            title: "Message sent successfully.",
+          });
         },
         (error) => {
-          console.error(error.message);
           setIsLoading(false);
-          form.current?.reset();
+          alert().fire({
+            icon: "error",
+            title: error.message,
+          });
         }
       );
   };
@@ -71,6 +77,7 @@ const Contact = () => {
                   name="user_email"
                   className="form-input border-touch"
                   placeholder="Email"
+                  required
                 />
               </div>
               <div className="form-group mb-4">
@@ -79,6 +86,7 @@ const Contact = () => {
                   name="subject"
                   className="form-input border-touch"
                   placeholder="Subject"
+                  required
                 />
               </div>
               <div className="form-group mb-4">
@@ -89,6 +97,7 @@ const Contact = () => {
                   id=""
                   cols={30}
                   rows={4}
+                  required
                 ></textarea>
               </div>
               <div className="form-group mb-4">
