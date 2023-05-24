@@ -17,7 +17,7 @@ const Skills = () => {
             {skills.map((skill, indx) => (
               <div className="col-lg-2 col-md-3 col mb-5 text-center text-white">
                 <div className="skill-holder shadow rounded p-3">
-                  <i className={skill.icon + " " + "icon"}></i> <br />
+                  <i className={`${skill.icon} icon`}></i> <br />
                   <span className="mt-5">{skill.name}</span>
                 </div>
               </div>

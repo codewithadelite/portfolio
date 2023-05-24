@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import emailjs from "@emailjs/browser";
 
-interface EmailParams {
-  user_email: string;
-  subject: string;
-  message: string;
-}
-
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
   const faceImg = require("../assets/images/face.jpg");
   const newicon = new (L.icon as any)({
     iconUrl: faceImg,
@@ -18,26 +13,29 @@ const Contact = () => {
   });
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
-  const [subject, setSubject] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    let payload: EmailParams = {
-      user_email: email,
-      subject: subject,
-      message: message,
-    };
-    /*
-    emailjs.sendForm(
-      process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-      process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
-      payload,
-      process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY
-    );
-  */
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID as string,
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID as string,
+        form.current as HTMLFormElement,
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY as string
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsLoading(false);
+          form.current?.reset();
+        },
+        (error) => {
+          console.error(error.message);
+          setIsLoading(false);
+          form.current?.reset();
+        }
+      );
   };
   return (
     <div className="container w-100  mt-5">
@@ -66,14 +64,13 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 mb-4">
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
               <div className="form-group mb-4">
                 <input
                   type="email"
-                  name="email"
+                  name="user_email"
                   className="form-input border-touch"
                   placeholder="Email"
-                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="form-group mb-4">
@@ -82,7 +79,6 @@ const Contact = () => {
                   name="subject"
                   className="form-input border-touch"
                   placeholder="Subject"
-                  onChange={(e) => setSubject(e.target.value)}
                 />
               </div>
               <div className="form-group mb-4">
@@ -93,7 +89,6 @@ const Contact = () => {
                   id=""
                   cols={30}
                   rows={4}
-                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
               <div className="form-group mb-4">
