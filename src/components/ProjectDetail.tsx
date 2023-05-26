@@ -21,7 +21,7 @@ const ProjectDetail = (props: Props) => {
         </div>
         <div className="buttons-group p-3 ">
           <button
-            className="btn btn-success bg-green py-2 px-4"
+            className="btn btn-success bg-green py-2 px-4 mb-2"
             onClick={() => props.openDetailsModal(props.details)}
           >
             <i className="fa fa-eye mr-2"></i> Project details
@@ -29,7 +29,7 @@ const ProjectDetail = (props: Props) => {
           &nbsp;
           {props.video && (
             <button
-              className="btn btn-success bg-green py-2 px-4"
+              className="btn btn-success bg-green py-2 px-4 mb-2"
               onClick={() => props.openVideoModal(props.video as string)}
             >
               <i className="fa fa-video mr-2"></i> Demo
@@ -38,7 +38,7 @@ const ProjectDetail = (props: Props) => {
           &nbsp;
           {props.github && (
             <a href={props.github} target="blank">
-              <button className="btn btn-success bg-green py-2 px-4">
+              <button className="btn btn-success bg-green py-2 px-4 mb-2">
                 <i className="fa-brands fa-github mr-2"></i> Github Link
               </button>
             </a>

@@ -3,24 +3,22 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm bg-black2 sticky-top p-3">
+    <nav className="navbar navbar-expand-lg bg-black2 sticky-top p-3">
       <div className="container">
         <NavLink to="/" className="nav-link">
           <h3 className="font-800 text-white">ADELITE</h3>
         </NavLink>
-
         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="#navbar"
-          aria-controls="navbarNavDropdown"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon bg-white"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbar">
+        <div className="collapse navbar-collapse" id="collapse">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item ">
               <NavLink
