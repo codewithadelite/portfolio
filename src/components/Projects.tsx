@@ -34,9 +34,7 @@ const Projects = () => {
     setShowVideo(true);
   };
 
-  const domain: any = require("../assets/images/projects/domain9.png");
   const ihuriro1: any = require("../assets/images/projects/dash.png");
-  const czz: any = require("../assets/images/projects/czz.png");
 
   const ihuriroDetails = () => {
     return (
