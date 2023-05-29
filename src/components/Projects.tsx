@@ -60,22 +60,6 @@ const Projects = () => {
       image: ihuriro1,
       video: "https://www.youtube.com/embed/mOtTAv_CzDg",
     },
-    {
-      name: "DOMAIN NAMES TOOL",
-      details: () => {
-        return;
-      },
-      image: domain,
-      github: "https://github.com/codewithadelite/domains",
-      video: "https://www.youtube.com/embed/hyYCn_kAngI",
-    },
-    {
-      name: "CZZ KNOWLEDGE SHARE",
-      details: () => {
-        return <p>Ihuriro project was built to connect people in rwanda</p>;
-      },
-      image: czz,
-    },
   ];
 
   return (
