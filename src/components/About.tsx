@@ -18,6 +18,20 @@ const About = () => {
                   Passionate Software developer. Highly experienced in web
                   development.
                 </p>
+                <a href="https://github.com/codewithadelite" target="blank">
+                  <button className="btn btn-success bg-green py-2 px-3">
+                    <i className="fa-brands fa-github"></i>
+                  </button>
+                </a>
+                <a
+                  href="https://linkedin.com/in/niyonshuti-shema-adelite-5b078a278
+"
+                  target="blank"
+                >
+                  <button className="btn btn-success bg-green py-2 px-3 mx-2">
+                    <i className="fa-brands fa-linkedin"></i>
+                  </button>
+                </a>
               </div>
             </div>
             <div className="col-md-5 d-flex justify-content-center">
@@ -39,9 +53,14 @@ const About = () => {
             <AnimationOnScroll animateIn="animate__fadeInUp">
               <p className="text-gray1 text-xl mt-3 text-center">
                 The name is <span className="gradient-text">Adelite</span>{" "}
-                Niyonshuti Shema. I'm software developer, passionate in
-                Fullstack development. When I am not writting code, I am playing
-                football ⚽ or listening Kompa musics 🎵.
+                Niyonshuti Shema. I'm software developer with a passion for
+                developing web applications that make a positive impact on
+                peoples lives.
+              </p>
+              <p className="text-gray1 text-xl mt-3 text-center">
+                In addition to coding and learning new tech, I enjoy playing
+                football ⚽ or listening Kompa musics 🎵. If any of these things
+                interest you too, I'd love to chat!
               </p>
             </AnimationOnScroll>
           </div>
