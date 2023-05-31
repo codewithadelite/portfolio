@@ -56,7 +56,8 @@ const Projects = () => {
       name: "IHURIRO.COM",
       details: ihuriroDetails,
       image: ihuriro1,
-      video: "https://www.youtube.com/embed/mOtTAv_CzDg",
+      video:
+        "https://drive.google.com/file/d/1Qgkd1v9ctL_H0gC_kYY2egwZ0fLkk-UM/preview",
     },
   ];
 
@@ -134,6 +135,7 @@ const Projects = () => {
             title="demo"
             width="100%"
             allowFullScreen
+            allow="autoplay"
             height="315"
             src={video}
           ></iframe>
