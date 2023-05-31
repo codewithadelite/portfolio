@@ -12,6 +12,12 @@ const Skills = () => {
         <div className=" d-flex align-items-center justify-content-center w-100">
           <h1 className="bg-green px-5 py-3 font-800 text-gray2 ">Skills</h1>
         </div>
+        <div className="container">
+          <p className="text-gray1 text-xl mt-3 text-center">
+            The scope of technologies and tools that i specialize in are listed
+            below.
+          </p>
+        </div>
         <div className="container skills-holder bg-gray3 rounded mt-4 mb-4 p-5">
           <div className="row pt-5 text-center">
             {skills.map((skill, indx) => (
