@@ -14,7 +14,7 @@ const Skills = () => {
         </div>
         <div className="container">
           <p className="text-gray1 text-xl mt-3 text-center">
-            The scope of technologies and tools that i specialize in are listed
+            The scope of technologies and tools that I specialize in are listed
             below.
           </p>
         </div>

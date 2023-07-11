@@ -15,7 +15,7 @@ const About = () => {
                   SHEMA NIYONSHUTI
                 </h1>
                 <p className="text-gray1 text-xl mt-4 ">
-                  Passionate Software developer. Highly experienced in web
+                  Passionate Software developer, Highly experienced in web
                   development.
                 </p>
                 <a href="https://github.com/codewithadelite" target="blank">
@@ -53,13 +53,15 @@ const About = () => {
             <AnimationOnScroll animateIn="animate__fadeInUp">
               <p className="text-gray1 text-xl mt-3 text-center">
                 The name is <span className="gradient-text">Adelite</span>{" "}
-                Niyonshuti Shema. I'm software developer with a passion for
-                developing web applications that make a positive impact on
-                peoples lives.
+                Niyonshuti Shema and I'm software developer. I work mostly with
+                Python/Django and Javascript/React to create web based
+                applications. I’ve demonstrated the ability to work alone
+                efficiently with minimal supervision, as well in the team in
+                order to achieve deliverable results.
               </p>
               <p className="text-gray1 text-xl mt-3 text-center">
                 In addition to coding and learning new tech, I enjoy playing
-                football ⚽ or listening Kompa musics 🎵. If any of these things
+                football ⚽ and listening musics 🎵. If any of these things
                 interest you too, I'd love to chat!
               </p>
             </AnimationOnScroll>
