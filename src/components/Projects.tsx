@@ -35,6 +35,7 @@ const Projects = () => {
   };
 
   const ihuriro1: any = require("../assets/images/projects/dash.png");
+  const domain: any = require("../assets/images/projects/domain10.png");
 
   const ihuriroDetails = () => {
     return (
@@ -51,6 +52,22 @@ const Projects = () => {
     );
   };
 
+  const dnmToolDetails = () => {
+    return (
+      <div>
+        <p>
+          DNM TOOL is a tool built to manage, visualize domain names data
+          onboarded in the system with the connection of REST API
+        </p>
+        <h5>Features:</h5>
+        <ul>
+          <li>Domains data visualization</li>
+          <li>Domains filtering</li>
+        </ul>
+      </div>
+    );
+  };
+
   const projects: Project[] = [
     {
       name: "IHURIRO.COM",
@@ -58,6 +75,12 @@ const Projects = () => {
       image: ihuriro1,
       video:
         "https://drive.google.com/file/d/1Qgkd1v9ctL_H0gC_kYY2egwZ0fLkk-UM/preview",
+    },
+    {
+      name: "DNM TOOL",
+      details: dnmToolDetails,
+      image: domain,
+      github: "https://github.com/codewithadelite/domains",
     },
   ];
 

@@ -18,7 +18,7 @@ const Skills = () => {
             below.
           </p>
         </div>
-        <div className="container skills-holder bg-gray3 rounded mt-4 mb-4 p-5">
+        <div className="container skills-holder  rounded mt-4 mb-4 p-1">
           <div className="row pt-5 text-center">
             {skills.map((skill, indx) => (
               <div className="col-lg-2 col-md-3 col mb-5 text-center text-white">
