@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
 import { Modal } from "react-bootstrap";
+import { relative } from "path";
 
 interface Project {
   name: string;
@@ -74,7 +75,7 @@ const Projects = () => {
       details: ihuriroDetails,
       image: ihuriro1,
       video:
-        "https://drive.google.com/file/d/1Qgkd1v9ctL_H0gC_kYY2egwZ0fLkk-UM/preview",
+        "https://www.loom.com/embed/e653dfc90ab242e981a8670cd7a561d8?sid=9a0893d2-f20e-4a7b-aeda-52ce20e84373?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true.",
     },
     {
       name: "DNM TOOL",
