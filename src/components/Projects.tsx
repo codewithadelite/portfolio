@@ -70,7 +70,7 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      name: "IHURIRO.COM",
+      name: "IHURIRO",
       details: ihuriroDetails,
       image: ihuriro1,
       video:
