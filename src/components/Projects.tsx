@@ -41,12 +41,14 @@ const Projects = () => {
     return (
       <div>
         <p>
-          Ihuriro is an online platform built to simplfy connection between
-          rwandans lost and found documents, .
+          Ihuriro is an all in one platform built to simplfy connection between
+          rwandans Buying & Selling secondhand products and lost and found
+          important documents.
         </p>
         <h5>Features:</h5>
         <ul>
-          <li>Selling products</li>
+          <li>Secondhand products listing</li>
+          <li>Lost & Found documents matching</li>
         </ul>
       </div>
     );
