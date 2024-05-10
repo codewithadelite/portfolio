@@ -46,7 +46,7 @@ const ProjectDetail = (props: Props) => {
           )}
           &nbsp;
           {props.web && (
-            <a href={props.github} target="blank">
+            <a href={props.web} target="blank">
               <button className="btn btn-success bg-green py-2 px-4 mb-2">
                 <i className="fa fa-globe mr-2"></i> Web Link
               </button>
