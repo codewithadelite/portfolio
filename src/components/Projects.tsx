@@ -5,6 +5,7 @@ import { Modal } from "react-bootstrap";
 interface Project {
   name: string;
   image: any;
+  web?: string;
   video?: string;
   github?: string;
   details: any;
@@ -34,8 +35,26 @@ const Projects = () => {
     setShowVideo(true);
   };
 
+  const genetera: any = require("../assets/images/projects/genetera.png");
   const ihuriro1: any = require("../assets/images/projects/dash.png");
   const domain: any = require("../assets/images/projects/domain10.png");
+
+  const geneteraDetails = () => {
+    return (
+      <div>
+        <p>
+          GENETERA AI is an Open-Source AI-powered content generator equipped
+          with distinctive knowledge tailored to your organization's data.
+        </p>
+        <h5>Features:</h5>
+        <ul>
+          <li>AI content creation</li>
+          <li>Knowledge Base</li>
+          <li>Team Collaboration</li>
+        </ul>
+      </div>
+    );
+  };
 
   const ihuriroDetails = () => {
     return (
@@ -72,6 +91,12 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
+      name: "GENETERA AI",
+      details: geneteraDetails,
+      image: genetera,
+      web: "https://www.geneteraai.com/",
+    },
+    {
       name: "IHURIRO",
       details: ihuriroDetails,
       image: ihuriro1,
@@ -98,6 +123,7 @@ const Projects = () => {
               image={project.image}
               name={project.name}
               details={project.details()}
+              web={project.web}
               video={project.video}
               github={project.github}
               openDetailsModal={openDetailsModal}
