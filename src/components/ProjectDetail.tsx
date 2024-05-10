@@ -4,6 +4,7 @@ interface Props {
   name: string;
   details: any;
   image: any;
+  web?: string;
   video?: string;
   github?: string;
   openDetailsModal(details: string): any;
@@ -40,6 +41,14 @@ const ProjectDetail = (props: Props) => {
             <a href={props.github} target="blank">
               <button className="btn btn-success bg-green py-2 px-4 mb-2">
                 <i className="fa-brands fa-github mr-2"></i> Github Link
+              </button>
+            </a>
+          )}
+          &nbsp;
+          {props.web && (
+            <a href={props.github} target="blank">
+              <button className="btn btn-success bg-green py-2 px-4 mb-2">
+                <i className="fa fa-globe mr-2"></i> Web Link
               </button>
             </a>
           )}
