@@ -33,8 +33,8 @@ const About = () => {
                   </button>
                 </a>
                 <a href="mailto:niadelite@gmail.com">
-                  <button class="btn btn-success bg-green py-2 px-3">
-                    <i class="fa-regular fa-envelope"></i>
+                  <button className="btn btn-success bg-green py-2 px-3">
+                    <i className="fa-regular fa-envelope"></i>
                   </button>
                 </a>
               </div>
