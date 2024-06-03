@@ -32,6 +32,11 @@ const About = () => {
                     <i className="fa-brands fa-linkedin"></i>
                   </button>
                 </a>
+                <a href="mailto:niadelite@gmail.com">
+                  <button class="btn btn-success bg-green py-2 px-3">
+                    <i class="fa-regular fa-envelope"></i>
+                  </button>
+                </a>
               </div>
             </div>
             <div className="col-md-5 d-flex justify-content-center">
