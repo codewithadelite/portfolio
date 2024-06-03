@@ -8,10 +8,6 @@
     "icon": "devicon-django-plain"
   },
   {
-    "name": "DRF",
-    "icon": "devicon-djangorest-plain"
-  },
-  {
     "name": "PostgreSQL",
     "icon": "devicon-postgresql-plain"
   },
@@ -46,5 +42,9 @@
   {
     "name": "Docker",
     "icon": "devicon-docker-plain"
+  },
+  {
+    "name": "Pytest",
+    "icon": "devicon-pytest-plain"
   }
 ]
