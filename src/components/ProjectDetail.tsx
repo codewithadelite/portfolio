@@ -35,17 +35,17 @@ const ProjectDetail = (props: Props) => {
               <i className="fa fa-video mr-2"></i> Demo
             </button>
           )}{" "}
+          {props.web && (
+            <a href={props.web} target="blank">
+              <button className="btn btn-success bg-green py-2 px-4 mb-2">
+                <i className="fa fa-globe mr-2"></i>
+              </button>
+            </a>
+          )}{" "}
           {props.github && (
             <a href={props.github} target="blank">
               <button className="btn btn-success bg-green py-2 px-4 mb-2">
                 <i className="fa-brands fa-github mr-2"></i>
-              </button>
-            </a>
-          )}{" "}
-          {props.web && (
-            <a href={props.web} target="blank">
-              <button className="btn btn-success bg-green py-2 px-4 mb-2">
-                <i className="fa fa-globe mr-2"></i> Web Link
               </button>
             </a>
           )}

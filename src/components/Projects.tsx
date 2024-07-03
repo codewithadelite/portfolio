@@ -120,6 +120,7 @@ const Projects = () => {
       details: geneteraDetails,
       image: genetera,
       web: "https://www.geneteraai.com/",
+      github: "https://github.com/genetera/geneteraai",
     },
     {
       name: "IHURIRO",
