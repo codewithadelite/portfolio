@@ -12,7 +12,7 @@ interface Props {
 }
 const ProjectDetail = (props: Props) => {
   return (
-    <div className="col-lg-10 mt-4">
+    <div className="col-lg-6 mt-4">
       <div className="project-holder bg-gray3 w-100 rounded">
         <div className="image-holder w-100">
           <img src={props.image} className="w-100" alt="" />
@@ -25,9 +25,8 @@ const ProjectDetail = (props: Props) => {
             className="btn btn-success bg-green py-2 px-4 mb-2"
             onClick={() => props.openDetailsModal(props.details)}
           >
-            <i className="fa fa-eye mr-2"></i> Project details
+            <i className="fa fa-eye mr-2"></i> Description
           </button>{" "}
-          &nbsp;
           {props.video && (
             <button
               className="btn btn-success bg-green py-2 px-4 mb-2"
@@ -36,15 +35,13 @@ const ProjectDetail = (props: Props) => {
               <i className="fa fa-video mr-2"></i> Demo
             </button>
           )}{" "}
-          &nbsp;
           {props.github && (
             <a href={props.github} target="blank">
               <button className="btn btn-success bg-green py-2 px-4 mb-2">
-                <i className="fa-brands fa-github mr-2"></i> Github Link
+                <i className="fa-brands fa-github mr-2"></i>
               </button>
             </a>
-          )}
-          &nbsp;
+          )}{" "}
           {props.web && (
             <a href={props.web} target="blank">
               <button className="btn btn-success bg-green py-2 px-4 mb-2">

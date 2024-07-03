@@ -35,9 +35,26 @@ const Projects = () => {
     setShowVideo(true);
   };
 
+  const sms: any = require("../assets/images/projects/sms-img.png");
   const genetera: any = require("../assets/images/projects/genetera.png");
   const ihuriro1: any = require("../assets/images/projects/dash.png");
   const domain: any = require("../assets/images/projects/domain10.png");
+
+  const smsDetails = () => {
+    return (
+      <div>
+        <p>
+          SMS is a system that visualizes data collected from sensors like
+          temperature, water-tank, humidity in real-time using <b>WEBSOCKET</b>{" "}
+          and published over <b>MQTT</b>.
+        </p>
+        <h5>Features:</h5>
+        <ul>
+          <li>RealTime Dashboard</li>
+        </ul>
+      </div>
+    );
+  };
 
   const geneteraDetails = () => {
     return (
@@ -90,6 +107,14 @@ const Projects = () => {
   };
 
   const projects: Project[] = [
+    {
+      name: "SENSORS MONITORING SYSTEM",
+      details: smsDetails,
+      image: sms,
+      github: "https://github.com/codewithadelite/sensors-monitoring-system",
+      video:
+        "https://www.loom.com/embed/a789b1219cea4d76b980f5684b68bf07?sid=7fdb9866-aa35-4027-aa48-838883b75147?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true",
+    },
     {
       name: "GENETERA AI",
       details: geneteraDetails,
