@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-black2 sticky-top p-3">
       <div className="container">
         <NavLink to="/" className="nav-link">
-          <h3 className="font-800 text-white">ADELITE</h3>
+          <h3 className="font-800 text-white">adelite</h3>
         </NavLink>
         <button
           className="navbar-toggler"
