@@ -15,8 +15,7 @@ const About = () => {
                   SHEMA NIYONSHUTI
                 </h1>
                 <p className="text-gray1 text-xl mt-4 ">
-                  Passionate Software developer, specializes in web
-                  applications.
+                  Software developer, specializes in web applications.
                 </p>
                 <a href="https://github.com/codewithadelite" target="blank">
                   <button className="btn btn-success bg-green py-2 px-3">

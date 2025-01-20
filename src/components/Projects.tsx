@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
 import { Modal } from "react-bootstrap";
+import Markdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+
+import {
+  smsDetails,
+  geneteraDetails,
+  dnmToolDetails,
+  ihuriroDetails,
+  padelearnDetails,
+  embuildDetails,
+} from "../utils/project-details";
 
 interface Project {
   name: string;
@@ -35,78 +46,26 @@ const Projects = () => {
     setShowVideo(true);
   };
 
+  const padelearn: any = require("../assets/images/projects/padelearn.png");
+  const embuild: any = require("../assets/images/projects/embuild.png");
   const sms: any = require("../assets/images/projects/sms-img.png");
   const genetera: any = require("../assets/images/projects/genetera.png");
   const ihuriro1: any = require("../assets/images/projects/dash.png");
   const domain: any = require("../assets/images/projects/domain10.png");
 
-  const smsDetails = () => {
-    return (
-      <div>
-        <p>
-          SMS is a system that visualizes data collected from sensors like
-          temperature, water-tank, humidity in real-time using <b>WEBSOCKET</b>{" "}
-          and published over <b>MQTT</b>.
-        </p>
-        <h5>Features:</h5>
-        <ul>
-          <li>RealTime Dashboard</li>
-        </ul>
-      </div>
-    );
-  };
-
-  const geneteraDetails = () => {
-    return (
-      <div>
-        <p>
-          GENETERA AI is an Open-Source AI-powered content generator equipped
-          with distinctive knowledge tailored to your organization's data.
-        </p>
-        <h5>Features:</h5>
-        <ul>
-          <li>AI content creation</li>
-          <li>Knowledge Base</li>
-          <li>Team Collaboration</li>
-        </ul>
-      </div>
-    );
-  };
-
-  const ihuriroDetails = () => {
-    return (
-      <div>
-        <p>
-          Ihuriro is an all in one platform built to simplfy connection between
-          rwandans Buying & Selling secondhand products and lost and found
-          important documents.
-        </p>
-        <h5>Features:</h5>
-        <ul>
-          <li>Secondhand products listing</li>
-          <li>Lost & Found documents matching</li>
-        </ul>
-      </div>
-    );
-  };
-
-  const dnmToolDetails = () => {
-    return (
-      <div>
-        <p>
-          DNM TOOL is a tool built to manage, visualize domain names data
-          onboarded in the system with the connection of REST API
-        </p>
-        <h5>Features:</h5>
-        <ul>
-          <li>Domains data visualization</li>
-          <li>Domains filtering</li>
-        </ul>
-      </div>
-    );
-  };
-
   const projects: Project[] = [
+    {
+      name: "PADELEARN",
+      details: padelearnDetails,
+      image: padelearn,
+      github: "https://github.com/codewithadelite/padelearn",
+    },
+    {
+      name: "EMBUILD",
+      details: embuildDetails,
+      image: embuild,
+      github: "https://github.com/codewithadelite/embuild",
+    },
     {
       name: "SENSORS MONITORING SYSTEM",
       details: smsDetails,
@@ -160,7 +119,7 @@ const Projects = () => {
       </div>
       <Modal
         show={showDetailsModal}
-        size="lg"
+        size="xl"
         centered
         onHide={closeDetailsModal}
         animation={false}
@@ -181,7 +140,9 @@ const Projects = () => {
             </div>
           </button>
         </Modal.Header>
-        <Modal.Body>{details}</Modal.Body>
+        <Modal.Body>
+          <Markdown rehypePlugins={[rehypeRaw]}>{details}</Markdown>
+        </Modal.Body>
       </Modal>
 
       <Modal
