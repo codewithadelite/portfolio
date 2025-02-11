@@ -63,11 +63,6 @@ const About = () => {
                 efficiently with minimal supervision, as well in the team in
                 order to achieve deliverable results.
               </p>
-              <p className="text-gray1 text-xl mt-3 text-center">
-                In addition to coding and learning new tech, I enjoy playing
-                football ⚽ and listening musics 🎵. If any of these things
-                interest you too, I'd love to chat!
-              </p>
             </AnimationOnScroll>
           </div>
         </div>
